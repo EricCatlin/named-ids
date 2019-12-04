@@ -1,0 +1,26 @@
+{
+  "name": "named-ids",
+  "version": "0.0.0",
+  "description": "A library to generate random, seedable, short human readable strings similar to or in place of an ID. ",
+  "main": "main/index.js",
+  "scripts": {
+    "test": "jest --collectCoverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricCatlin/named-ids.git"
+  },
+  "author": "Eric Catlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricCatlin/named-ids/issues"
+  },
+  "homepage": "https://github.com/EricCatlin/named-ids#readme",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}
