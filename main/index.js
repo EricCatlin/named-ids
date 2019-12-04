@@ -3,7 +3,7 @@ const { hash } = require("../hash");
 const { nouns, adverbs, adjectives, verbs } = require("../vocabulary");
 
 const getNamedId = (id, namespace) => {
-  const seededUUID = uuid(id.toString(), namespace);
+  const seededUUID = uuid(''+id, namespace);
   const idParts = seededUUID.split("-");
   const hashes = idParts.map(i => hash(i));
   
