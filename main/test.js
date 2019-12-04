@@ -6,7 +6,7 @@ test("Generates random name", () => {
 });
 
 test("Generates random names", () => {
-  const tests = 100000;
+  const tests = 1000;
   const values = [];
 
   for (let i = 0; i < tests; i++) {
