@@ -107,16 +107,22 @@ const verbs = [
   "walked",
   "went",
   "whimpered",
-  "whimpered",
   "whispered"
 ];
 
 const adverbs = [
+  "kindly",
+  "judgmentally",
+  "hungrily",
+  "generously",
+  "delightfully",
+  "bravely",
+  "blissfully",
+  "awkwardly",
   "carefully",
   "cordially",
   "correctly",
   "eagerly",
-  "easily",
   "easily",
   "fast",
   "jovially",
@@ -168,8 +174,6 @@ const adjectives = [
   "fat",
   "fine",
   "flat",
-  "free",
-  "free",
   "free",
   "fresh",
   "full",
@@ -225,7 +229,6 @@ const adjectives = [
   "useful",
   "warm",
   "willing",
-  "weak",
   "weak",
   "whole",
   "windy"
