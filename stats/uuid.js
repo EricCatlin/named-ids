@@ -1,4 +1,5 @@
 const uuidv4 = require("uuid/v4");
+const { stats } = require("./utils");
 const { hash } = require("../hash");
 const { nouns, adverbs, adjectives, verbs } = require("../vocabulary");
 const results = [];
@@ -9,7 +10,6 @@ for (var i = 0; i < tests; i++) {
 }
 
 const hashes = results.map(i => hash(i));
-
 const modded = hashes.map(i => i % 100);
 
 const counts = modded.reduce(
@@ -27,10 +27,7 @@ const dirivitive2 = Object.values(dirivitive).reduce(
   {}
 );
 
-const min = Math.min(...modded);
-const max = Math.max(...modded);
-const spread = max - min;
-const average = modded.reduce((a, b) => a + b, 0) / modded.length;
+const { min, max, average, spread } = stats(modded);
 const possibleResults =
   nouns.length * adverbs.length * verbs.length * adjectives.length * 100;
 console.dir({ min, max, average, spread, dirivitive2, possibleResults });
