@@ -1,9 +1,9 @@
-name: Publish NPM
+name: Semantic Release
 
 on:
-  release:
-    types: [created]
-
+  push:
+    branches: 
+      - release
 jobs:
   build:
     runs-on: ubuntu-latest
