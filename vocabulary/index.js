@@ -214,7 +214,7 @@ const adjectives = [
   "sad",
   "safe",
   "salty",
-  "share",
+  "sure",
   "short",
   "slow",
   "small",
