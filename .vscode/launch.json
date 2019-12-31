@@ -8,11 +8,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Run Stats",
+            "name": "UUID Stats",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/stats/index.js"
+            "program": "${workspaceFolder}/stats/uuid.js"
         },
           
         {
@@ -23,6 +23,16 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/main/example.js"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Name Stats",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/stats/name-parts.js"
+        },
+          
     ]
 }
