@@ -15,7 +15,7 @@ test("Generates name parts", () => {
 });
 
 test("Generates random names", () => {
-  const tests = 1000;
+  const tests = 10;
   const values = [];
 
   for (let i = 0; i < tests; i++) {
@@ -29,18 +29,17 @@ test("Generates random names", () => {
   expect(values.length).toEqual(unique.length);
 });
 
-
 test("Validate name parts have equal distribution", () => {
-    const tests = 1000;
-    const values = [];
-  
-    for (let i = 0; i < tests; i++) {
-      values.push(getNameIdParts("hello world" + i));
-    }
-  
-    const unique = values.filter(
-      (value, index, self) => self.indexOf(value) === index
-    );
-  
-    expect(values.length).toEqual(unique.length);
-  });
+  const tests = 10;
+  const values = [];
+
+  for (let i = 0; i < tests; i++) {
+    values.push(getNameIdParts("hello world" + i));
+  }
+
+  const unique = values.filter(
+    (value, index, self) => self.indexOf(value) === index
+  );
+
+  expect(values.length).toEqual(unique.length);
+});
