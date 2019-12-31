@@ -2,7 +2,7 @@ const { uuid } = require("../uuid");
 const { hash } = require("../hash");
 const { nouns, adjectives /*verbs, adverbs*/ } = require("../vocabulary");
 
-const getNamedId = (id, namespace) => {
+const getNamedId = (id = uuid(), namespace) => {
   const { adjective, noun /*verb, adverb,number*/ } = getNameIdParts(
     id,
     namespace
@@ -10,7 +10,7 @@ const getNamedId = (id, namespace) => {
   return `${adjective} ${noun}` /*${verb} ${adverb} ${number}*/;
 };
 
-const getNameIdParts = (id, namespace) => {
+const getNameIdParts = (id = uuid(), namespace) => {
   const seededUUID = uuid("" + id, namespace);
   const idParts = seededUUID.split("-");
   const hashes = idParts.map(i => hash(i));

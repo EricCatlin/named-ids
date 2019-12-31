@@ -4,6 +4,11 @@ test("Generates random name", () => {
   const value = getNamedId();
   expect(value).not.toBeNull();
 });
+test("Generates random names", () => {
+  const value = getNamedId();
+  const value2 = getNamedId();
+  expect(value).not.toEqual(value2);
+});
 
 test("Generates name parts", () => {
   const { number, adjective, noun, verb, adverb } = getNameIdParts();
